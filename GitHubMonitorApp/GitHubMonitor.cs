@@ -14,7 +14,7 @@ namespace GitHubMonitorApp
     {
         [FunctionName("GitHubMonitor")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function,"post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("Our GitHub Monitor processed an action.");
@@ -34,5 +34,3 @@ namespace GitHubMonitorApp
         }
     }
 }
-
-//{firstname:"Omer",lastname:"Mohideen"}
